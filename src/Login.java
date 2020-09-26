@@ -25,12 +25,11 @@ public class Login {
 	
 	public Login() {
 		
-		setUser("fca");
-		setPassword("1234");
+		auth();
 		
 	}
 	
-	public Boolean auth() {
+	private Boolean auth() {
 		
 		    Scanner scan = null;
 			try {
@@ -39,14 +38,15 @@ public class Login {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		    Scanner keyboard = new Scanner (System.in);
 		    setUser(scan.nextLine());
 		    setPassword(scan.nextLine()); // looks at selected file in scan
 
+		    Scanner keyboard = new Scanner (System.in);
 		    System.out.println("#Insert user: ");
 		    String inpUser = keyboard.nextLine();
-		    System.out.println("\n#Insert password: ");
+		    System.out.println("#Insert password: ");
 		    String inpPass = keyboard.nextLine(); // gets input from user
+		    keyboard.close();
 
 		    if (inpUser.equals(getUser()) && inpPass.equals(getPassword())) {
 		        System.out.print("\n### Login success ### \n");
@@ -56,8 +56,6 @@ public class Login {
 		        return false;
 		    }
 		    
-
-		
 		
 	}
 

@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 
 public class KeyRecord {
+
+	private String nome;
+	private int num_key;
+	private ArrayList<Key> record;
 	
 	public String getNome() {
 		return nome;
@@ -18,16 +22,16 @@ public class KeyRecord {
 		this.num_key = num_key;
 	}
 
-	private String nome;
-	private int num_key;
-	private ArrayList<Key> record;
 	
+	public ArrayList<Key> getRecord() {
+		return record;
+	}
+
 	public KeyRecord() {
 		
 		 record = new ArrayList<Key>();
 		
 	}
-	
 	
 	public void addRecord(String user, String psw, String url) {
 		
@@ -39,7 +43,7 @@ public class KeyRecord {
 		
 		for(Key k : record){
 			
-			System.out.println("User: "+k.getUser()+" - Psw: "+k.getPsw()+" - Url: "+k.getUrl()+"\n");
+			System.out.println(k.toString());
 			
 		}
 		

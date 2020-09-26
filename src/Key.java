@@ -44,7 +44,7 @@ public class Key {
 	
 	@Override
 	public String toString() {
-		return "Key [getUser()=" + getUser() + ", getPsw()=" + getPsw() + ", getUrl()=" + getUrl() + "]";
+		return "User: " + getUser() + " - Password: " + getPsw() + " - URL: " + getUrl();
 	}
 		
 
