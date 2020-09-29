@@ -49,7 +49,7 @@ public class Login {
 		    keyboard.close();
 
 		    if (inpUser.equals(getUser()) && inpPass.equals(getPassword())) {
-		        System.out.print("\n### Login success ### \n");
+		        System.out.print("\n### Login success ### \n\n");
 		        return true;
 		    } else {
 		        System.out.print("\n### Error ### \n");

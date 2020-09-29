@@ -22,10 +22,6 @@ public class KeyRecord {
 		this.num_key = num_key;
 	}
 
-	
-	public ArrayList<Key> getRecord() {
-		return record;
-	}
 
 	public KeyRecord() {
 		
@@ -39,14 +35,19 @@ public class KeyRecord {
 		
 	}
 	
-	public void getRecords() {
+	
+	public String[] getRecordToFile() {
 		
-		for(Key k : record){
+		String[] record_file = new String[record.size()];
+		
+		for (int i = 0; i < record.size(); i++) {
 			
-			System.out.println(k.toString());
+			record_file[i] = record.get(i).getUser()+"-"+record.get(i).getPsw()+"-"+record.get(i).getUrl();
 			
 		}
 		
+		return record_file;
+
 	}
 
 

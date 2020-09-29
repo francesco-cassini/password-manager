@@ -9,6 +9,7 @@ class LocalDatabase {
 	private int i = 0;
 	private KeyRecord database = new KeyRecord();
 	private Scanner scan = null;
+	String[] record;
 
 	LocalDatabase(){
 		
@@ -41,11 +42,17 @@ class LocalDatabase {
 			database.addRecord(splitted[i], splitted[i + 1], splitted[i + 2]);
 
 		}
+		
+		record = database.getRecordToFile();
 	}
 
 	public void getRecords() {
 		
-		database.getRecords();
+		for(int i = 0; i < record.length; i++){
+			
+			System.out.println((i+1)+") "+record[i]);
+			
+		}
 	
 	}
 	
@@ -65,9 +72,10 @@ class LocalDatabase {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		writer.print("");
 		
-		writer.print(database.getRecord());
+		for(String s : record) {
+		writer.print(s+"\n");
+		}
 		
 		writer.close();
 		

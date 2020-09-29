@@ -8,8 +8,6 @@ public class Main {
 			
 			db.getRecords();
 			
-			db.addRecord("Gino", "4444", "www.fra.com");
-			
 			db.saveDB();
 
 		}	

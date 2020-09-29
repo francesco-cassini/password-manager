@@ -22,9 +22,9 @@ public class Key {
 		return psw.getPsw();
 	}
 
-	/*public void setPsw(Password psw) {
-		this.psw = psw;
-	}*/
+	public void setPsw(String psw) {
+		this.psw = new Password(psw);
+	}
 
 	private String user;
 	private Password psw;
@@ -34,7 +34,7 @@ public class Key {
 	
 	public Key(String user, String psw, String url)
 	{
-		this.psw = new Password(psw);
+		setPsw(psw);
 		setUser(user);
 		setUrl(url);
 		
