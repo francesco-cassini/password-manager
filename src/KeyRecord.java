@@ -35,6 +35,12 @@ public class KeyRecord {
 		
 	}
 	
+	public void deleteRecord(int i) {
+		
+		record.remove(i-1);
+		
+	}
+	
 	
 	public String[] getRecordToFile() {
 		

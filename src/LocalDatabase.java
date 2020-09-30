@@ -46,7 +46,7 @@ class LocalDatabase {
 		record = database.getRecordToFile();
 	}
 
-	public void getRecords() {
+	public void printRecords() {
 		
 		for(int i = 0; i < record.length; i++){
 			
@@ -59,12 +59,21 @@ class LocalDatabase {
 	public void addRecord(String user, String psw, String url) {
 		
 		database.addRecord(user, psw, url);
+		record = database.getRecordToFile();
+		
+	}
+	
+	public void deleteRecord(int i) {
+		
+		database.deleteRecord(i);
+		record = database.getRecordToFile();
 		
 	}
 	
 	public void saveDB() {
 		
 		PrintWriter writer = null;
+		record = database.getRecordToFile();
 		
 		try {
 			writer = new PrintWriter(new File(".\\DB.txt"));

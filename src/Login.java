@@ -25,11 +25,9 @@ public class Login {
 	
 	public Login() {
 		
-		auth();
-		
 	}
 	
-	private Boolean auth() {
+	public Boolean auth() {
 		
 		    Scanner scan = null;
 			try {
@@ -46,7 +44,6 @@ public class Login {
 		    String inpUser = keyboard.nextLine();
 		    System.out.println("#Insert password: ");
 		    String inpPass = keyboard.nextLine(); // gets input from user
-		    keyboard.close();
 
 		    if (inpUser.equals(getUser()) && inpPass.equals(getPassword())) {
 		        System.out.print("\n### Login success ### \n\n");
