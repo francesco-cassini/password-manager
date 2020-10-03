@@ -27,7 +27,7 @@ public class Login {
 		
 	}
 	
-	public Boolean auth() {
+	public boolean auth() {
 		
 		    Scanner scan = null;
 			try {
@@ -39,12 +39,12 @@ public class Login {
 		    setUser(scan.nextLine());
 		    setPassword(scan.nextLine()); // looks at selected file in scan
 
-		    Scanner keyboard = new Scanner (System.in);
 		    System.out.println("#Insert user: ");
-		    String inpUser = keyboard.nextLine();
+		    String inpUser = ConsoleReader.read();
 		    System.out.println("#Insert password: ");
-		    String inpPass = keyboard.nextLine(); // gets input from user
+		    String inpPass = ConsoleReader.read(); // gets input from user
 
+		    
 		    if (inpUser.equals(getUser()) && inpPass.equals(getPassword())) {
 		        System.out.print("\n### Login success ### \n\n");
 		        return true;
